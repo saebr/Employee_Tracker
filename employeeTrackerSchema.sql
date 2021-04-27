@@ -5,14 +5,14 @@ USE employee_trackerDB;
 
 CREATE TABLE department (
 name VARCHAR(30) NULL,
-id INT PRIMARY KEY
+id INT PRIMARY KEY AUTO_INCREMENT
 );
 
 CREATE TABLE role (
 title VARCHAR(30) NULL,
 salary DECIMAL(10,4),
 department_id INT NULL,
-id INT PRIMARY KEY
+id INT PRIMARY KEY AUTO_INCREMENT
 );
 
 CREATE TABLE employee (
@@ -20,7 +20,7 @@ first_name VARCHAR(30) NULL,
 last_name VARCHAR(30) NULL,
 role_id INT NULL,
 manager_id INT NULL,
-id INT PRIMARY KEY
+id INT PRIMARY KEY AUTO_INCREMENT
 )
 
 SELECT * FROM department;

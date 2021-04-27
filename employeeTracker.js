@@ -74,7 +74,7 @@ connection.connect((err) => {
               first_name:data.first_name,
               last_name: data.last_name,
               role_id: data.role_id,
-              manager_id: data. manager_id
+              manager_id: data.manager_id
             },
             (err, data) => {
               if (err) throw err;
@@ -101,36 +101,29 @@ connection.connect((err) => {
               start()
             })
             })
-            case 'Add Employee':
+            case 'Add Roles':
               inquirer
               .prompt([{
-              name: 'first_name',
+              name: 'title',
               type: 'input',
-              message: 'What is their first name?'
+              message: 'What title of this role?'
               },
               {
-                name: 'last_name',
+                name: 'salary',
               type: 'input',
-              message: 'What is their last name?'
+              message: 'What is the salary of this role?'
               },
               {
-                name: 'role_id',
+                name: 'department_id',
               type: 'input',
-              message: 'What is their Role ID?'
+              message: 'What is the Department ID?'
               },
-              {
-                name: 'manager_id',
-              type: 'input',
-              message: 'What is their Manager ID?'
-              }
-              
             ]) .then(data => {
-              connection.query('INSERT INTO employee SET ?',
+              connection.query('INSERT INTO role SET ?',
             {
-              first_name:data.first_name,
-              last_name: data.last_name,
-              role_id: data.role_id,
-              manager_id: data. manager_id
+              title:data.title,
+              salary: data.salary,
+              department_id: data.department_id
             },
             (err, data) => {
               if (err) throw err;

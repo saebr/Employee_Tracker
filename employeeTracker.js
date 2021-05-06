@@ -30,6 +30,7 @@ connection.connect((err) => {
               console.table(data)
               start()
             })
+            break;
           
           case 'View all Roles':
             connection.query('SELECT * FROM role', (err, data) => {
@@ -37,6 +38,7 @@ connection.connect((err) => {
               console.table(data)
               start()
             })
+            break;
 
           case 'View all Departments':
             connection.query('SELECT * FROM department', (err, data) => {
@@ -44,6 +46,7 @@ connection.connect((err) => {
               console.table(data)
               start()
             })
+            break;
 
             case 'Add Employee':
               inquirer
@@ -82,6 +85,8 @@ connection.connect((err) => {
               start()
             })
             })
+            break;
+
             case 'Add Department':
               inquirer
               .prompt([{
@@ -101,6 +106,7 @@ connection.connect((err) => {
               start()
             })
             })
+            break;
             case 'Add Roles':
               inquirer
               .prompt([{
@@ -131,14 +137,7 @@ connection.connect((err) => {
               start()
             })
             })
-            
-            
-
-            
-
-            
-
-            
+            break; 
 
         }
       })

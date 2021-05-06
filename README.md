@@ -18,3 +18,5 @@ To get started, insert the following command and follow the on screen instructio
 ```
 node .\employeeTracker.js
 ```
+## Video
+[Click here](https://drive.google.com/file/d/1ywXoIP5iN8xvvAlxQo8Aey8b8f96dw5c/view?usp=sharing) to watch a video of the program working
